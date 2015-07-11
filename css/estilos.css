@@ -1,0 +1,74 @@
+body
+{
+	padding: 0;
+	margin: 0;
+}
+.header
+{
+	background: #48649F;
+}
+.img_logo
+{
+	width: 200px;
+}
+.titulo_pag
+{
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+}
+.menu
+{
+	text-align: center;
+	background: #DBDAD8;
+}
+.menu ul
+{
+	padding: 0;
+	margin: 0;
+}
+.menu ul li
+{
+	display: inline-block;
+	list-style: none;
+}
+.menu ul li a
+{
+	padding: 10px;
+	display: inline-block;
+	margin: 0;
+	color: #16210B;
+	text-decoration: none;
+	font-weight: bold;
+}
+.menu ul li a:hover
+{
+	background: #AAAAAB;
+}
+.menu-left
+{
+	float: left;	
+	background: #DBDAD8;
+}
+.menu-left .menu-secundario li
+{
+	  list-style-image: url("../img/arrow.png");
+}
+.menu-left .menu-secundario li a
+{
+	text-decoration: none;
+}
+.menu-left .menu-secundario li a:hover
+{
+	text-decoration: underline;
+}
+.menu-left .menu-secundario .opc_pri
+{
+	list-style-image: none;
+	list-style: none;
+	padding: 5px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 17px;
+}
