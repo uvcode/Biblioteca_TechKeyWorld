@@ -1,35 +1,58 @@
-
-<html>
-<body>
-	
-	
-    <form action="IngresarAlumnoPHP.php" method="post">
-	<label align="center"> Agregar Alumno </label><br><br><br>
-
-	<label align="center"> Codigo del alumno </label>
-	<input type="text" name="codigoalumno"> <br><br><br>
-
-	<label align="center"> DNI del alumno </label>
-	<input type="text" name="DNIAlumno"> <br><br><br>
-
-    <label align="center"> Nombre del alumno </label>
-	<input type="text" name="NombreAlumno"> <br><br><br>
-
-	<label align="center"> Apellidos del alumno</label>
-	<input type="text" name="ApellidosAlumno"> <br><br><br>
-
-	<label align="center"> telefono del alumno  </label>
-	<input type="text" name="CelularAlumno"> <br><br><br>
-
-	<label align="center"> Corrreo electronico del alumno </label>
-	<input type="text" name="CorreoAlumno"> <br><br><br>
-    <label align="center"> Estado </label>
-    <select  name='EstadoAlumno'>
-    	<option value="sancionado">sancionado</option>
-    	<option value="autorizado">autorizado</option>
-    </select><br><br><br>	
-	<input type="submit" value="guardar">
-</form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Biblioteca Virtual....!!! :P</title>
+	<link rel="stylesheet" href="css/ed-grid.css">
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="">
+	<header class="header">
+		<div class="grupo">
+			<div class="caja movil-30"><img class="img_logo" src="img/logo.png" alt=""></div>
+			<div class="caja movil-70"><h1 class="titulo_pag">Escuela Profesional de Ingenieria de Sistemas e Informatica</h1></div>
+		</div>
+	</header>
+	<nav class="menu">
+		<ul>
+		  <li><a href="#">ADMINISTRADOR</a></li>
+		  <li><a href="#">ACCEDER AL SISTEMA</a></li>
+		</ul>
+	</nav>
+	<section class="contenido">
+	<div class="caja total"><p class="titulo_g">AGREGAR ALUMNO</p></div>
+		 <div class="caja movil-total center">
+		    <form action="IngresarAlumnoPHP.php" method="post">			
+			<div class="caja movil-total input">
+				<input type="text" name="codigoalumno" placeholder="CODIGO"> 
+			</div>			
+			<div class="caja movil-total input">
+				<input type="text" name="DNIAlumno" placeholder="DNI DEL ALUMNO"> 
+			</div>
+		    <div class="caja movil-total input">
+				<input type="text" name="NombreAlumno" placeholder="NOMBRE"> 
+			</div>
+			<div class="caja movil-total input">
+				<input type="text" name="ApellidosAlumno" placeholder="APELLIDOS"> 
+			</div>
+			<div class="caja movil-total input">
+				<input type="text" name="CelularAlumno" placeholder="CELULAR"> 
+			</div>
+			<div class="caja movil-total input">
+				<input type="text" name="CorreoAlumno" placeholder="EMAIL">
+			</div>
+			<div class="caja movil-total combobox">
+		    	<!--<label align="center"> Estado </label>-->
+			    <select  name='EstadoAlumno'>
+		    		<option value="sancionado">sancionado</option>
+		    		<option value="autorizado">autorizado</option>
+		    	</select>
+			</div>
+			<div class="caja movil-total button">
+				<input type="submit" value="GUARDAR">
+			</div>
+		</form>
+	</div>
 </body>
 </html>
 
