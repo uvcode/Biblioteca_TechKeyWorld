@@ -1,19 +1,38 @@
 
-<html>
-<body>
-	
-	
-    <form action="ingresarcategoriaphp.php" method="post">
-	<label align="center"> Agregar Categoria </label><br><br><br>
-
-	<label align="center"> Codigo </label>
-	<input type="text" name="codigoautor"> <br><br><br>
-
-	<label align="center"> Nombre categoria </label>
-	<input type="text" name="nomcategoria"> <br><br><br>
-
-	<input type="submit" value="guardar">
-</form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Biblioteca Virtual....!!! :P</title>
+	<link rel="stylesheet" href="css/ed-grid.css">
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="">
+	<header class="header">
+		<div class="grupo">
+			<div class="caja movil-30"><img class="img_logo" src="img/logo.png" alt=""></div>
+			<div class="caja movil-70"><h1 class="titulo_pag">Escuela Profesional de Ingenieria de Sistemas e Informatica</h1></div>
+		</div>
+	</header>
+	<nav class="menu">
+		<ul>
+		  <li><a href="#">ADMINISTRADOR</a></li>
+		  <li><a href="#">ACCEDER AL SISTEMA</a></li>
+		</ul>
+	</nav>
+	<section class="contenido">
+	<div class="caja total"><p class="titulo_g">AGREGAR CATEGORÍA</p></div>
+		 <div class="caja movil-total center">
+		    <form action="ingresarcategoriaphp.php" method="post">			
+			<div class="caja movil-total input">
+				<input type="text" name="codigoautor" placeholder="CODIGO"> 
+			</div>			
+			<div class="caja movil-total input">
+				<input type="text" name="nomcategoria" placeholder="NOMBRE DE LA CATEGORÍA"> 
+			</div>
+		    
+		</form>
+	</div>
 </body>
 </html>
 
