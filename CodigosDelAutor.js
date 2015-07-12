@@ -1,6 +1,6 @@
 function codigoAutor() 
 {
-	document.write("<label for=''>Código del Autor</label>");
+	document.write("<label for=''>Codigo del Autor  </label>");
 	document.write("<select name='codigoautor'>");
 	for(var i=1; i<=100; i++ )
 	{

@@ -1,33 +1,32 @@
 <html>
+<head>
+	<meta charset="utf-8">
+	<title>formulario del autor  </title>
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<!--estilos.css.desarrollandoapp-->
+	<link rel="stylesheet" href="css/estilos.css">
+	<script type="text/javascript" src="CodigosDelAutor.js"></script>
+</head>
 <body>
 	
-	
     
+     <form action="ingresarautorphp.php" method="post">
 	<label align="center"> Agregar Autor </label><br><br><br>
-    <script type="text/javascript">
+    <script type="text/javascript" >
      codigoAutor();
     </script>
 	 <br><br><br>
 
-	<label align="center"> DNI del alumno </label>
-	<input type="text" name="DNIAlumno"> <br><br><br>
+	<label align="center"> Nombre del Autor </label>
+	<input type="text" name="NombreAutor"> <br><br><br>
 
-    <label align="center"> Nombre del alumno </label>
-	<input type="text" name="NombreAlumno"> <br><br><br>
+    <label align="center"> Apellidos del Autor </label>
+	<input type="text" name="ApellidosAlutor"> <br><br><br>
 
-	<label align="center"> Apellidos del alumno</label>
-	<input type="text" name="ApellidosAlumno"> <br><br><br>
-
-	<label align="center"> telefono del alumno  </label>
-	<input type="text" name="CelularAlumno"> <br><br><br>
-
-	<label align="center"> Corrreo electronico del alumno </label>
-	<input type="text" name="CorreoAlumno"> <br><br><br>
-    <label align="center"> Estado </label>
-    <select  name='EstadoAlumno'>
-    	<option value="sancionado">sancionado</option>
-    	<option value="autorizado">autorizado</option>
-    </select><br><br><br>	
+	<label align="center"> Nacionalidad del autor</label>
+	<input type="text" name="NacionalidadAutor"> <br><br><br>
+	
 	<input type="submit" value="guardar">
 </form>
 </body>
