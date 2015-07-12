@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-<TITLE>Ingresar Autor.php</TITLE>
+<TITLE>Ingresar Categoria del libro.php</TITLE>
 </HEAD>
 <BODY>
 <?php
