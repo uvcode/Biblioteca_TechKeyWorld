@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-<TITLE>Ingresar Alumno.php</TITLE>
+<TITLE>Ingresar Autor.php</TITLE>
 </HEAD>
 <BODY>
 <?php
@@ -8,10 +8,6 @@
 $NombreAutor = $_POST['NombreAutor'];
 $ApellidosAlutor = $_POST['ApellidosAlutor'];
 $NacionalidadAutor = $_POST['NacionalidadAutor'];
-
-
-
-
 
 echo "".$NombreAutor."";
 echo "".$ApellidosAlutor."";
