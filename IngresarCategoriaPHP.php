@@ -5,11 +5,8 @@
 <BODY>
 <?php
 
-$codigoautor = $_POST['codigoautor'];
 $nomcategoria = $_POST['nomcategoria'];
 
-
-echo "".$codigoautor."";
 echo "".$nomcategoria."";
 
 $conectar = mysql_connect("localhost","root","TechKeyWorld2015") or die 
@@ -20,8 +17,8 @@ if ($conectar)
       }
 mysql_select_db("bdbibliotecatkw",$conectar);
 
-$consulta="INSERT INTO tcategoria ( CodigoCategoria,NombreCategoria)
-      values ('$codigoautor','$nomcategoria')";
+$consulta="INSERT INTO tcategoria(NombreCategoria)
+      values ('$nomcategoria')";
 
 $hacerconsulta=mysql_query($consulta,$conectar);
 if($hacerconsulta)
