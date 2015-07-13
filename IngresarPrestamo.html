@@ -33,20 +33,14 @@
 		 <div class="caja movil-total center">
 		    <form name="formcodalumno" action="IngresarprestamoPHP.php" method="post">			
 					
-			<div class="caja movil-total input">
-				<input type="text" name="codigoalumno" placeholder="CODIGO DEL ALUMNO"> 
-				<a href="popupbqdalumnophp.php?q=a" target="_blank" 
-				onclick="window.open(this.href,this.target,'width=400,
-				height=150,top=200,left=200,toolbar=no,location=no,status=no,menubar=no')
-				;return false;">buscar</a>				
+			<div class="caja movil-total inbu">
+				<input class="textbox" type="text" name="codigoalumno" placeholder="CODIGO DEL ALUMNO"> 
+				<input class="btn_busqueda" type="button"  value="..." onclick="window.open('popupbqdalumnophp.php?q=a','nuevaVentana','width=1000, height=600')"> 	
  				
 			</div>
-			<div class="caja movil-total input">
-				<input type="text" name="codigolibro" placeholder="CODIGO DEL LIBRO"> 
-				<a href="popupbqdalibrophp.php?q=a" target="_blank" 
-				onclick="window.open(this.href,this.target,'width=400,
-				height=150,top=200,left=200,toolbar=no,location=no,status=no,menubar=no')
-				;return false;">buscar</a>	
+			<div class="caja movil-total inbu">
+				<input class="textbox" type="text" name="codigolibro" placeholder="CODIGO DEL LIBRO"> 
+				<input class="btn_busqueda" type="button"  value="..." onclick="window.open('popupbqdalibrophp.php?q=a','nuevaVentana','width=1000, height=600')"> 
 			</div>
 		    <div class="caja movil-total input">
 				<input type="text" name="fechadeprestamo" placeholder="FECHA PRESTAMO"> 
