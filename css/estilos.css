@@ -153,3 +153,25 @@ body
 	display: inline-block;
 	width: 13%;
 }
+.inbu
+{
+	padding-left: 50px;
+}
+.inbu .textbox
+{
+	font-size: 18px;
+ 	color: #8e8d8d;
+  	font-family: "Droid Sans";
+  	padding: 11px 0 10px 5px;
+  	background-color: #fdfdfd;
+  	width: 255px;
+  	border: 1px solid #d8d8d8;
+  	margin: 13px 0 -3px 0;
+  	border-radius: 3px;
+  	box-shadow: inset 2px 2px 4px #f1f1f1;	
+}
+.inbu .btn_busqueda
+{
+	padding: 12px 15px;
+	margin-left: 6px;
+}
