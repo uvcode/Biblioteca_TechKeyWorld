@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Biblioteca Virtual....!!! :P</title>
+	<link rel="stylesheet" href="css/ed-grid.css">
+	<link rel="stylesheet" href="css/estilos.css">
+	<script type="text/javascript" src="CodigosDelAutor.js"></script>
+</head>
+<body class="">
+	<header class="header">
+		<div class="grupo">
+			<div class="caja movil-30"><img class="img_logo" src="img/logo.png" alt=""></div>
+			<div class="caja movil-70"><h1 class="titulo_pag">Escuela Profesional de Ingenieria de Sistemas e Informatica</h1></div>
+		</div>
+	</header>
+	<nav class="menu">
+		<ul>
+		  <li><a href="#">ADMINISTRADOR</a></li>
+		  <li><a href="#">ACCEDER AL SISTEMA</a></li>
+		</ul>
+	</nav>
+	<section class="contenido">
+	<div class="caja total"><p class="titulo_g">AGREGAR AUTOR</p></div>
+		 <div class="caja movil-total center">
+		    <form action="IngresarLibroPHP.php" method="post">				
+			<div class="caja movil-total input">
+				<input type="text" name="CodigoLibro" placeholder="Código del libro"> 
+			</div>
+		    <div class="caja movil-total button">
+				<input type="text" name="CodigoAutor" placeholder="Codigo del autor">
+				<input type="submit" name="BusquedaAutor" value="Buscar un autor">  
+			</div>
+			<div class="caja movil-total button">
+				<input type="text" name="CodigoCategoria" placeholder="Codigo de la categoria">
+				<input type="submit" name="BusquedaCategoria" value="Buscar una categoría"> 
+			</div>
+			<div class="caja movil-total input">
+				<input type="text" name="NombreLibro" placeholder="Nombre del libro"> 
+			</div>
+			<div class="caja movil-total input">
+				<input type="text" name="EdicionLibro" placeholder="Edición del libro"> 
+			</div>
+			<div class="caja movil-total combobox">
+		    	<!--<label align="center"> Estado </label>-->
+		    	 <p>ESTADO DEL LIBRO</p>
+			    <select  name='EstadoLibro'>
+		    		<option value="PRESTADO">PRESTADO</option>
+		    		<option value="DISPONIBLE">DISPONIBLE</option>
+		    		<option value="DE BAJA">DE BAJA</option>
+		    	</select>
+			</div>
+			
+			<div class="caja movil-total button">
+				<input type="submit" value="GUARDAR">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
+
+
