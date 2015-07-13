@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Biblioteca Virtual....!!! :P</title>
+	<link rel="stylesheet" href="css/ed-grid.css">
+	<link rel="stylesheet" href="css/estilos.css">
+	<script type="text/javascript" src="js/validacion_form.js"></script>
+</head>
+<body class="">
+	<header class="header">
+		<div class="grupo">
+			<div class="caja movil-30"><img class="img_logo" src="img/logo.png" alt=""></div>
+			<div class="caja movil-70"><h1 class="titulo_pag">Escuela Profesional de Ingenieria de Sistemas e Informatica</h1></div>
+		</div>
+	</header>
+	<nav class="menu">
+		<ul>
+		  <li><a href="#">ADMINISTRADOR</a></li>
+		  <li><a href="#">ACCEDER AL SISTEMA</a></li>
+		</ul>
+	</nav>
+
+	<SCRIPT LANGUAGE="JavaScript">
+	function envia(pag){ 
+		document.form.action= pag 
+		document.form.submit() 
+	} 
+	</script>
+
+	<section class="contenido">
+	<div class="caja total"><p class="titulo_g">AGREGAR PRESTAMO</p></div>
+		 <div class="caja movil-total center">
+		    <form name="formcodalumno" action="IngresarprestamoPHP.php" method="post">			
+					
+			<div class="caja movil-total input">
+				<input type="text" name="codigoalumno" placeholder="CODIGO DEL ALUMNO"> 
+				<a href="popupbqdalumnophp.php?q=a" target="_blank" 
+				onclick="window.open(this.href,this.target,'width=400,
+				height=150,top=200,left=200,toolbar=no,location=no,status=no,menubar=no')
+				;return false;">buscar</a>				
+ 				
+			</div>
+			<div class="caja movil-total input">
+				<input type="text" name="codigolibro" placeholder="CODIGO DEL LIBRO"> 
+				<a href="popupbqdalibrophp.php?q=a" target="_blank" 
+				onclick="window.open(this.href,this.target,'width=400,
+				height=150,top=200,left=200,toolbar=no,location=no,status=no,menubar=no')
+				;return false;">buscar</a>	
+			</div>
+		    <div class="caja movil-total input">
+				<input type="text" name="fechadeprestamo" placeholder="FECHA PRESTAMO"> 
+			</div>
+			<div class="caja movil-total input">
+				<input type="text" name="fechaparadevolver" placeholder="FECHA PARA DEVOLVER"> 
+			</div>
+			<div class="caja movil-total input">
+				<input id="celular" type="text" name="estadoprestamo" placeholder="ESTADO"> 
+			</div>
+			<div class="caja movil-total input">
+				<input type="text" name="observacionprestamo" placeholder="OBSERVACIONES">
+			</div>
+			
+			<div class="caja movil-total button">
+				<input type="submit" value="GUARDAR">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
+
