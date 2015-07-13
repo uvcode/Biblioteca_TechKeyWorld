@@ -1,3 +1,4 @@
+
 <<!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +12,7 @@
 <script>
 
 function datos(codigolib){
-    opener.document.formcodalumno.codigolibro.value = codigolib;
+    opener.document.formcodalumno.codigolibro.value = codigolibro;
     //opener.document.neo.origen.value = nom;
     //opener.document.neo.lugar.value = lug;
     //opener.document.neo.lstname.value = nro;
@@ -128,8 +129,8 @@ WebForm_FireDefaultButton(event, &#39;ctl00_ContentPlaceMain_btnBuscar&#39;)">
 
         $servidor="localhost";
         $userbase="root";
-        $passbase="";
-        $basedatos="bdbiblioteca1";
+        $passbase="TechKeyWorld2015";
+        $basedatos="bdbibliotecatkw1";
 
         // Connect to the database and checks if the user / password
         // combinaison matches any existing database entry
@@ -147,30 +148,30 @@ WebForm_FireDefaultButton(event, &#39;ctl00_ContentPlaceMain_btnBuscar&#39;)">
          
 
             $i++;
-            $codigolib=$row{'CodigoLibro'};
-            $codigoaut=$row{'CodigoAutor'};
+            $codigolibro=$row{'codigolibro'};
+            $codigoaut=$row{'codigoautor'};
 
-            $codigocat=$row{'CodigoCategoria'};
+            $codigocat=$row{'codigocategoria'};
             $codigocat=str_replace(" ", "&nbsp;", $codigocat);
 
-            $nombre=$row{'NombreLibro'};
+            $nombre=$row{'nombrelibro'};
             $nombre=str_replace(" ", "&nbsp;", $nombre);
 
-            $edicion=$row{'EdicionLibro'};
+            $edicion=$row{'edicionlibro'};
             //para transferir espacios
             $edicion=str_replace(" ", "&nbsp;", $edicion);
 
-            $estado=$row{'EstadoLibro'};
+            $estado=$row{'estadolibro'};
             $estado=str_replace(" ", "&nbsp;", $estado);
 
-            //$Estado=$row{'EstadoAlumno'};
+            //$Estado=$row{'estadoalumno'};
             //$Estado=str_replace(" ", "&nbsp;", $Estado);
                        
             //<tr OnMouseOver='Resaltar_On(this);' OnMouseOut='Resaltar_Off(this);
             //' OnClick=datos('$codigo','$colegio','$lugar','$id')>
             echo "
             <tr OnMouseOver='Resaltar_On(this);' OnMouseOut='Resaltar_Off(this);
-            ' OnClick=datos('$codigolib')>
+            ' OnClick=datos('$codigolibro')>
                 <td>$i</td>
                 <td>$codigolib</td>
                 <td>$codigoaut</td>
