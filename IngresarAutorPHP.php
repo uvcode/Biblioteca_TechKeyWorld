@@ -5,7 +5,6 @@
 <BODY>
 <?php
 
-$codigoautor = $_POST['codigoautor'];
 $NombreAutor = $_POST['NombreAutor'];
 $ApellidosAlutor = $_POST['ApellidosAlutor'];
 $NacionalidadAutor = $_POST['NacionalidadAutor'];
@@ -13,7 +12,7 @@ $NacionalidadAutor = $_POST['NacionalidadAutor'];
 
 
 
-echo "".$codigoautor."";
+
 echo "".$NombreAutor."";
 echo "".$ApellidosAlutor."";
 echo "".$NacionalidadAutor."";
@@ -27,8 +26,8 @@ if ($conectar)
       }
 mysql_select_db("bdbibliotecatkw",$conectar);
 
-$consulta="INSERT INTO TAutor ( CodigoAutor,NombreAutor, ApellidosAutor,NacionalidadAutor)
-      values ('$codigoautor','$NombreAutor','$ApellidosAlutor','$NacionalidadAutor')";
+$consulta="INSERT INTO TAutor ( NombreAutor, ApellidosAutor,NacionalidadAutor)
+      values ('$NombreAutor','$ApellidosAlutor','$NacionalidadAutor')";
 
 $hacerconsulta=mysql_query($consulta,$conectar);
 if($hacerconsulta)
