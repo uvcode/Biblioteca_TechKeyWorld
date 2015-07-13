@@ -8,13 +8,15 @@
 $nomcategoria = $_POST['nomcategoria'];
 
 echo "".$nomcategoria."";
-
+if($nomcategoria !=null)
+{
 $conectar = mysql_connect("localhost","root","TechKeyWorld2015") or die 
             ("no se conecto");
 if ($conectar)
       {
             echo ("Se ha conectado correctamente");
       }
+
 mysql_select_db("bdbibliotecatkw",$conectar);
 
 $consulta="INSERT INTO tcategoria(NombreCategoria)
@@ -29,7 +31,11 @@ else
 {
       echo ("No se ha podido grabar el registro");
 }
-
+}
+else
+{
+	echo("no se ingreso todos los datos");
+}
 
 ?>
 
