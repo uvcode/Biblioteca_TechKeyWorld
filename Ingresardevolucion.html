@@ -22,44 +22,75 @@
 	</nav>
 
 	<SCRIPT LANGUAGE="JavaScript">
-	function envia(pag){ 
+	function envia(pag)
+	{ 
 		document.form.action= pag 
 		document.form.submit() 
 	} 
+
 	</script>
 
 	<section class="contenido">
-	<div class="caja total"><p class="titulo_g">AGREGAR PRESTAMO DE LIBRO</p></div>
+	<div class="caja total"><p class="titulo_g">DEVOLUCION DEL LIBRO</p></div>
 		 <div class="caja movil-total center">
-		    <form name="formcodalumno" action="IngresarprestamoPHP.php" method="post">			
+		    <form name="formdevoluciones" action="IngresarDevolucionPHP.php" method="post">			
 					
 			<div class="caja movil-total inbu">
-			<LABEL>CODIGO ALUMNO</LABEL>
-				<input class="textbox" type="text" name="codigoalumno" placeholder="CODIGO DEL ALUMNO"> 
-				<input class="btn_busqueda" type="button"  value="..." onclick="window.open('popupbqdaprestamosphp.php?q=a','nuevaVentana','width=1000, height=600')"> 	
+				<LABEL>CODIGO PRESTAMO</LABEL>
+				<input class="textbox" type="text" name="codigoprestamo" readonly="readonly" placeholder="CODIGO PRESTAMO"> 
+				<input class="btn_busqueda" type="button"  value="..." onclick="window.open('popupbqdaprestamosphp.php?q=','nuevaVentana','width=1000, height=600')"> 	
  				
 			</div>
+
 			<div class="caja movil-total inbu">
-			<LABEL>CODIGO LIBRO</LABEL>
-				<input class="textbox" type="text" name="codigolibro" placeholder="CODIGO DEL LIBRO"> 
-				<input class="btn_busqueda" type="button"  value="..." onclick="window.open('popupbqdalibrophp.php?q=a','nuevaVentana','width=1000, height=600')"> 
+				<LABEL>CODIGO ALUMNO</LABEL>
+				<input class="textbox" type="text" name="codigoalumno" readonly="readonly" placeholder="CODIGO ALUMNO"> 
+				
 			</div>
 		    <div class="caja movil-total input">
-		    <LABEL>FECHA PRESTAMO</LABEL>
-				<input type="text" name="fechadeprestamo" placeholder="FECHA PRESTAMO"> 
+		    	<LABEL>NOMBRE ALUMNO</LABEL>
+				<input type="text" name="nomalumno" readonly="readonly" placeholder="NOMBRE ALUMNO"> 
+			</div>
+
+			<div class="caja movil-total input">
+				<LABEL>APELLIDO ALUMNO</LABEL>
+				<input type="text" name="apealumno" readonly="readonly" placeholder="APELLIDO ALUMNO"> 
 			</div>
 			<div class="caja movil-total input">
-			<LABEL>FECHA PARA DEVOLVER</LABEL>
-				<input type="text" name="fechaparadevolver" placeholder="FECHA PARA DEVOLVER"> 
+				<LABEL>CODIGO LIBRO</LABEL>
+				<input id="codigo" type="text" name="codlibro" readonly="readonly" placeholder="CODIGO LIBRO"> 
 			</div>
+			<div class="caja movil-total input">
+				<LABEL>NOMBRE LIBRO</LABEL>
+				<input id="nombre" type="text" name="nomlibro" readonly="readonly" placeholder="NOMBRE LIBRO"> 
+			</div>
+			<div class="caja movil-total input">
+				<LABEL>NOMBRE AUTOR</LABEL>
+				<input type="text" name="nomautor" readonly="readonly" placeholder="NOMBRE AUTOR">
+			</div>
+
+			<div class="caja movil-total input">
+				<LABEL>FECHA PRESTAMO</LABEL>
+				<input type="text" name="fechaprestamo" readonly="readonly" placeholder="FECHA PRESTAMO">
+			</div>
+
+			<div class="caja movil-total input">
+				<LABEL>FECHA DEVOLUCION</LABEL>
+				<input type="text" name="fechadevolucion" readonly="readonly" placeholder="FECHA DEVOLUCION">
+			</div>
+
+			
+
 			<div class="caja movil-total input">
 			<LABEL>ESTADO</LABEL>
-				<input id="celular" type="text" name="estadoprestamo" placeholder="ESTADO"> 
+				<input type="text" name="estado" readonly="readonly" placeholder="ESTADO">
 			</div>
+
 			<div class="caja movil-total input">
-			<LABEL>OBSERVACIONES</LABEL>
-				<input type="text" name="observacionprestamo" placeholder="OBSERVACIONES">
+				<LABEL>OBSERVACIONES</LABEL>
+				<input type="text" name="observacion" placeholder="OBSERVACIONES">
 			</div>
+
 			
 			<div class="caja movil-total button">
 				<input type="submit" value="GUARDAR">

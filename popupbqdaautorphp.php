@@ -128,7 +128,7 @@ WebForm_FireDefaultButton(event, &#39;ctl00_ContentPlaceMain_btnBuscar&#39;)">
         $servidor="localhost";
         $userbase="root";
         $passbase="TechKeyWorld2015";
-        $basedatos="bdbibliotecatkw1";
+        $basedatos="bdbibliotecatkw";
 
         // Connect to the database and checks if the user / password
         // combinaison matches any existing database entry

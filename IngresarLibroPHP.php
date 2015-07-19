@@ -5,12 +5,12 @@
 <BODY>
 <?php
 
-$CodigoLibro = $_POST['CodigoLibro'];
-$CodigoAutor = $_POST['CodigoAutor'];
-$CodigoCategoria = $_POST['CodigoCategoria'];
-$NombreLibro = $_POST['NombreLibro'];
-$EdicionLibro = $_POST['EdicionLibro'];
-$EstadoLibro = $_POST['EstadoLibro'];
+$CodigoLibro = $_POST['codigolibro'];
+$CodigoAutor = $_POST['codigoautor'];
+$CodigoCategoria = $_POST['codigocategoria'];
+$NombreLibro = $_POST['nombrelibro'];
+$EdicionLibro = $_POST['edicionlibro'];
+$EstadoLibro = $_POST['estadolibro'];
 
 
 
@@ -29,7 +29,7 @@ if ($conectar)
       }
 mysql_select_db("bdbibliotecatkw",$conectar);
 
-$consulta="INSERT INTO TLibro ( CodigoLibro, CodigoAutor,CodigoCategoria,NombreLibro,EdicionLibro,EstadoLibro)
+$consulta="INSERT INTO TLibro (CodigoLibro,CodigoAutor,CodigoCategoria,NombreLibro,EdicionLibro,EstadoLibro)
       values ('$CodigoLibro','$CodigoAutor','$CodigoCategoria','$NombreLibro','$EdicionLibro','$EstadoLibro')";
 
 $hacerconsulta=mysql_query($consulta,$conectar);

@@ -11,12 +11,22 @@
 
 <script>
 
-function datos(codigo){
+function datos(codigo,nombre,apellidos,estado){
+    if (estado=="autorizado")
+    {
     opener.document.formcodalumno.codigoalumno.value = codigo;
-    //opener.document.neo.origen.value = nom;
-    //opener.document.neo.lugar.value = lug;
+    opener.document.formcodalumno.nombrealumno.value = nombre;
+    opener.document.formcodalumno.apellidosalumno.value = apellidos;
+
+    
     //opener.document.neo.lstname.value = nro;
     window.close();
+    }
+    else
+    {
+
+        alert("El usuario no esta autorizado");
+    }
 }
 
 
@@ -147,35 +157,35 @@ WebForm_FireDefaultButton(event, &#39;ctl00_ContentPlaceMain_btnBuscar&#39;)">
             $codigo=$row{'CodigoAlumno'};
             $dni=$row{'DNIAlumno'};
 
-            $Nombre=$row{'NombreAlumno'};
-            $Nombre=str_replace(" ", "&nbsp;", $Nombre);
+            $nombre=$row{'NombreAlumno'};
+            $nombre=str_replace(" ", "&nbsp;",$nombre);
 
-            $Apellidos=$row{'ApellidosAlumno'};
-            $Apellidos=str_replace(" ", "&nbsp;", $Apellidos);
+            $apellidos=$row{'ApellidosAlumno'};
+            $apellidos=str_replace(" ", "&nbsp;",$apellidos);
 
-            $Celular=$row{'CelularAlumno'};
+            $celular=$row{'CelularAlumno'};
             //para transferir espacios
-            $Celular=str_replace(" ", "&nbsp;", $Celular);
+            $celular=str_replace(" ", "&nbsp;",$celular);
 
-            $Correo=$row{'CorreoAlumno'};
-            $Correo=str_replace(" ", "&nbsp;", $Correo);
+            $correo=$row{'CorreoAlumno'};
+            $correo=str_replace(" ", "&nbsp;",$correo);
 
-            //$Estado=$row{'EstadoAlumno'};
-            //$Estado=str_replace(" ", "&nbsp;", $Estado);
+            $estado=$row{'EstadoAlumno'};
+            $estado=str_replace(" ", "&nbsp;", $estado);
                        
             //<tr OnMouseOver='Resaltar_On(this);' OnMouseOut='Resaltar_Off(this);
             //' OnClick=datos('$codigo','$colegio','$lugar','$id')>
             echo "
             <tr OnMouseOver='Resaltar_On(this);' OnMouseOut='Resaltar_Off(this);
-            ' OnClick=datos('$codigo')>
+            ' OnClick=datos('$codigo','$nombre','$apellidos','$estado')>
                 <td>$i</td>
                 <td>$codigo</td>
                 <td>$dni</td>
-                <td>$Nombre</td>
-                <td>$Apellidos</td>
-                <td>$Celular</td>
-                <td>$Correo</td>
-                <td>".$row{'EstadoAlumno'}."</td>
+                <td>$nombre</td>
+                <td>$apellidos</td>
+                <td>$celular</td>
+                <td>$correo</td>
+                <td>$estado</td>
                 
             </tr>";
       }

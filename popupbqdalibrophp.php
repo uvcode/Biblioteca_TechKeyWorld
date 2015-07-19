@@ -12,12 +12,21 @@
 
 <script>
 
-function datos(codigolib){
+function datos(codigolib,estado){
+
+    if (estado=="disponible")
+    {
     opener.document.formcodalumno.codigolibro.value = codigolib;
     //opener.document.neo.origen.value = nom;
     //opener.document.neo.lugar.value = lug;
     //opener.document.neo.lstname.value = nro;
     window.close();
+    }
+    else
+    {
+
+        alert("El libro no esta disponible");
+    }
 }
 
 
@@ -172,7 +181,7 @@ WebForm_FireDefaultButton(event, &#39;ctl00_ContentPlaceMain_btnBuscar&#39;)">
             //' OnClick=datos('$codigo','$colegio','$lugar','$id')>
             echo "
             <tr OnMouseOver='Resaltar_On(this);' OnMouseOut='Resaltar_Off(this);
-            ' OnClick=datos('$codigolib')>
+            ' OnClick=datos('$codigolib','$estado')>
                 <td>$i</td>
                 <td>$codigolib</td>
                 <td>$codigoaut</td>

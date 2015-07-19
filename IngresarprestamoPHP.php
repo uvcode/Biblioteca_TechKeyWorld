@@ -10,16 +10,8 @@ $codigoalumn = $_POST['codigoalumno'];
 $codigolibr = $_POST['codigolibro'];
 $fechadeprestam = $_POST['fechadeprestamo'];
 $fechaparadevolve = $_POST['fechaparadevolver'];
-$estadoprestam = $_POST['estadoprestamo'];
 $observacionprestam = $_POST['observacionprestamo'];
 
-
-echo "".$codigoalumn."<BR>";
-echo "".$codigolibr."<BR>";
-echo "".$fechadeprestam."<BR>";
-echo "".$fechaparadevolve."<BR>";
-echo "".$estadoprestam."<BR>";
-echo "".$observacionprestam."<BR>";
 
 
 $conectar = mysql_connect("localhost","root","TechKeyWorld2015") or die 
@@ -33,11 +25,20 @@ mysql_select_db("bdbibliotecatkw",$conectar);
 $consulta="INSERT INTO tprestamo (codigoalumno,CodigoLibro,FechaDePrestamo,
 	FechaParaDevolver,EstadoPrestamo,ObservacionPrestamo)
       values ('$codigoalumn','$codigolibr','$fechadeprestam',
-      	'$fechaparadevolve','$estadoprestam','$observacionprestam')";
+      	'$fechaparadevolve','sin devolver','$observacionprestam')";
+
+$consulta1="UPDATE `bdbibliotecatkw`.`tlibro` SET `EstadoLibro`='prestado' WHERE `CodigoLibro`='$codigolibr'";
+
+$consulta2="UPDATE `bdbibliotecatkw`.`talumno` SET `EstadoAlumno`='posee prestamo' WHERE `CodigoAlumno`='$codigoalumn'";
 
 $hacerconsulta=mysql_query($consulta,$conectar);
 if($hacerconsulta)
-{
+{ 
+
+	
+	$hacerconsulta1=mysql_query($consulta1,$conectar);
+      $hacerconsulta2=mysql_query($consulta2,$conectar);
+	
       echo ("Se ha grabado el registro");
 }
 else

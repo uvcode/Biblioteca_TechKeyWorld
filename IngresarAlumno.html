@@ -25,22 +25,24 @@
 		 <div class="caja movil-total center">
 		    <form action="IngresarAlumnoPHP.php" method="post">			
 			<div class="caja movil-total input">
-				<input type="text" name="codigoalumno" placeholder="CODIGO"> 
+				<input type="text" name="codigoalumno" placeholder="CODIGO" required="required"> 
 			</div>			
 			<div class="caja movil-total input">
-				<input type="text" name="DNIAlumno" placeholder="DNI DEL ALUMNO"> 
+				<input type="number" name="DNIAlumno" placeholder="DNI DEL ALUMNO" required="required"
+				maxlength="8" > 
 			</div>
 		    <div class="caja movil-total input">
-				<input type="text" name="NombreAlumno" placeholder="NOMBRE"> 
+				<input type="text" name="NombreAlumno" placeholder="NOMBRE" required="required"> 
 			</div>
 			<div class="caja movil-total input">
-				<input type="text" name="ApellidosAlumno" placeholder="APELLIDOS"> 
+				<input type="text" name="ApellidosAlumno" placeholder="APELLIDOS" required="required"> 
 			</div>
 			<div class="caja movil-total input">
-				<input id="celular" type="text" name="CelularAlumno" placeholder="CELULAR"> 
+				<input id="celular" type="number" name="CelularAlumno" placeholder="CELULAR" 
+				maxlength="9" required="required"> 
 			</div>
 			<div class="caja movil-total input">
-				<input type="text" name="CorreoAlumno" placeholder="EMAIL">
+				<input type="email" name="CorreoAlumno" placeholder="EMAIL" required="required">
 			</div>
 			<div class="caja movil-total combobox">
 		    	<!--<label align="center"> Estado </label>-->

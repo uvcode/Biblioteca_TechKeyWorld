@@ -15,10 +15,11 @@
 		</div>
 	</header>
 	<nav class="menu">
-		<ul>
-		  <li><a href="#">ADMINISTRADOR</a></li>
-		  <li><a href="#">ACCEDER AL SISTEMA</a></li>
-		</ul>
+		
+		  <label>AGREGAR PRESTAMO DE LIBRO</a></label>
+		  <a href="javascript:history.back()"><img src="img\return\back.png" width='35' height='35' align="right" ></a>
+
+		 </ul>		
 	</nav>
 
 	<SCRIPT LANGUAGE="JavaScript">
@@ -29,16 +30,27 @@
 	</script>
 
 	<section class="contenido">
-	<div class="caja total"><p class="titulo_g">AGREGAR PRESTAMO DE LIBRO</p></div>
+	
 		 <div class="caja movil-total center">
 		    <form name="formcodalumno" action="IngresarprestamoPHP.php" method="post">			
 					
 			<div class="caja movil-total inbu">
 			<LABEL>CODIGO ALUMNO</LABEL>
-				<input class="textbox" type="text" name="codigoalumno" placeholder="CODIGO DEL ALUMNO"> 
-				<input class="btn_busqueda" type="button"  value="..." onclick="window.open('popupbqdalumnophp.php?q=a','nuevaVentana','width=1000, height=600')"> 	
- 				
+				<input class="textbox" type="text" name="codigoalumno" readonly="readonly"  placeholder="CODIGO DEL ALUMNO"> 
+				<input class="btn_busqueda" type="button"  value="..." onclick="window.open('popupbqdalumnophp.php?q=','nuevaVentana','width=1000, height=600')"> 	
 			</div>
+
+
+			<div class="caja movil-total input">
+			<LABEL>NOMBRE</LABEL>
+				<input id="celular" type="text" name="nombrealumno" disabled="disabled" placeholder="NOMBRE"> 
+			</div>
+			<div class="caja movil-total input">
+			<LABEL>APELLIDOS</LABEL>
+				<input id="celular" type="text" name="apellidosalumno" readonly="readonly"  placeholder="APELLIDOS"> 
+			</div>
+			
+
 			<div class="caja movil-total inbu">
 			<LABEL>CODIGO LIBRO</LABEL>
 				<input class="textbox" type="text" name="codigolibro" placeholder="CODIGO DEL LIBRO"> 
@@ -52,10 +64,7 @@
 			<LABEL>FECHA PARA DEVOLVER</LABEL>
 				<input type="text" name="fechaparadevolver" placeholder="FECHA PARA DEVOLVER"> 
 			</div>
-			<div class="caja movil-total input">
-			<LABEL>ESTADO</LABEL>
-				<input id="celular" type="text" name="estadoprestamo" placeholder="ESTADO"> 
-			</div>
+			
 			<div class="caja movil-total input">
 			<LABEL>OBSERVACIONES</LABEL>
 				<input type="text" name="observacionprestamo" placeholder="OBSERVACIONES">

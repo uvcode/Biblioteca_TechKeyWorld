@@ -105,8 +105,8 @@ WebForm_FireDefaultButton(event, &#39;ctl00_ContentPlaceMain_btnBuscar&#39;)">
 <table   border="1" cellspacing="0" cellpadding="0">
     <tr bgcolor="#AEE4FF">
 
-     
-            <td  width="37">Codigo Categoria</td>
+        <td  width="37">Num</td>
+        <td  width="37">Codigo Categoria</td>
         <td  width="66">Nombre Categoria</td>
         
         
@@ -128,7 +128,7 @@ WebForm_FireDefaultButton(event, &#39;ctl00_ContentPlaceMain_btnBuscar&#39;)">
         $servidor="localhost";
         $userbase="root";
         $passbase="TechKeyWorld2015";
-        $basedatos="bdbibliotecatkw1";
+        $basedatos="bdbibliotecatkw";
 
         // Connect to the database and checks if the user / password
         // combinaison matches any existing database entry
